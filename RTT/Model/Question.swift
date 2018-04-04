@@ -6,17 +6,24 @@
 //  Copyright © 2018 Wu Peirong. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Question {
     
     var questionTitle: String = ""
     var questionAnswer: Int = 0
+    var answerOne: String = ""
+    var answerTwo: String = ""
+    var answerThree: String = ""
     
-    init(title: String, answer: Int) {
+    init(title: String, answer: Int, firstAnswer: String, secondAnswer: String, thirdAnswer: String) {
         
         questionTitle = title
         questionAnswer = answer
+        answerOne = firstAnswer
+        answerTwo = secondAnswer
+        answerThree = thirdAnswer
+        
     }
-    
+
 }
