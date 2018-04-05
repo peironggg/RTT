@@ -89,12 +89,18 @@
                                 <color key="backgroundColor" red="0.39436848958333331" green="0.58987087673611116" blue="0.33688014097330921" alpha="0.47915774828767121" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Answer Two"/>
+                                <connections>
+                                    <action selector="answerTapped:" destination="ElQ-nh-AqY" eventType="touchUpInside" id="e0R-bC-s5n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ue4-cZ-Bz9">
                                 <rect key="frame" x="0.0" y="410" width="375" height="42"/>
                                 <color key="backgroundColor" red="0.39436848958333331" green="0.58987087673611116" blue="0.88807508680555558" alpha="0.47915774828767121" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Answer Three"/>
+                                <connections>
+                                    <action selector="answerTapped:" destination="ElQ-nh-AqY" eventType="touchUpInside" id="JDu-75-qgD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100/100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csg-Kr-nl8">
                                 <rect key="frame" x="295" y="64" width="80" height="22"/>
