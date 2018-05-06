@@ -17,6 +17,7 @@
 		E514DDB82074A89F000AB8E1 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DDB72074A89F000AB8E1 /* QuestionController.swift */; };
 		E514DDBA2074AFBA000AB8E1 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DDB92074AFBA000AB8E1 /* QuestionBank.swift */; };
 		E52B0D81207A1C20006FB57D /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B0D7F207A1C20006FB57D /* QuestionCell.swift */; };
+		E52B0D8A209EEC50006FB57D /* TestScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B0D89209EEC50006FB57D /* TestScore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E514DDB72074A89F000AB8E1 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		E514DDB92074AFBA000AB8E1 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		E52B0D7F207A1C20006FB57D /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		E52B0D89209EEC50006FB57D /* TestScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				E514DDA720710C57000AB8E1 /* LaunchScreen.storyboard */,
 				E514DDA220710C57000AB8E1 /* Main.storyboard */,
 				E52B0D7F207A1C20006FB57D /* QuestionCell.swift */,
+				E52B0D89209EEC50006FB57D /* TestScore.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E514DDB420710DCC000AB8E1 /* Question.swift in Sources */,
+				E52B0D8A209EEC50006FB57D /* TestScore.swift in Sources */,
 				E514DDA120710C57000AB8E1 /* WelcomeController.swift in Sources */,
 				E514DDB82074A89F000AB8E1 /* QuestionController.swift in Sources */,
 				E52B0D81207A1C20006FB57D /* QuestionCell.swift in Sources */,

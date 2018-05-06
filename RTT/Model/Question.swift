@@ -15,6 +15,7 @@ class Question {
     var answerOne: String = ""
     var answerTwo: String = ""
     var answerThree: String = ""
+    var wrongOrRight: Bool = false
     
     init(title: String, answer: Int, firstAnswer: String, secondAnswer: String, thirdAnswer: String) {
         

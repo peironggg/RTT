@@ -10,6 +10,14 @@ import UIKit
 
 class QuestionController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
+    @IBAction func submitButtonPressed(_ sender: UIBarButtonItem) {
+        
+        let alert = UIAlertController(title: "Submit", message: "Have you finished all questions?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { (action) in
+            self.performSegue(withIdentifier: "toTestScore", sender: sender)
+        }))
+    }
     
     @IBOutlet weak var collectionView1: UICollectionView!
     
