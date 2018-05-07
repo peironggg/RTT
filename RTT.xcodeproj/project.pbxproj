@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0816764BE4900D78D03E899E /* Pods_RTT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24AC412D4185D76AA06A29D /* Pods_RTT.framework */; };
 		E514DD9F20710C57000AB8E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DD9E20710C57000AB8E1 /* AppDelegate.swift */; };
 		E514DDA120710C57000AB8E1 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DDA020710C57000AB8E1 /* WelcomeController.swift */; };
 		E514DDA420710C57000AB8E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E514DDA220710C57000AB8E1 /* Main.storyboard */; };
@@ -24,9 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C24AC412D4185D76AA06A29D /* Pods_RTT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C90004A226A2D11096F6686D /* Pods-RTT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTT.release.xcconfig"; path = "Pods/Target Support Files/Pods-RTT/Pods-RTT.release.xcconfig"; sourceTree = "<group>"; };
-		E300947108F08DA76230DE1D /* Pods-RTT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RTT/Pods-RTT.debug.xcconfig"; sourceTree = "<group>"; };
 		E514DD9B20710C57000AB8E1 /* RTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E514DD9E20710C57000AB8E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E514DDA020710C57000AB8E1 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
@@ -49,29 +45,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0816764BE4900D78D03E899E /* Pods_RTT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A33D82492E96CB08062A50C3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C24AC412D4185D76AA06A29D /* Pods_RTT.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		E514DD9220710C57000AB8E1 = {
 			isa = PBXGroup;
 			children = (
 				E514DDB520710E2C000AB8E1 /* Default-568h@2x.png */,
 				E514DD9D20710C57000AB8E1 /* RTT */,
 				E514DD9C20710C57000AB8E1 /* Products */,
-				EF2C700774C725D6E1B32774 /* Pods */,
-				A33D82492E96CB08062A50C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,15 +120,6 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
-		EF2C700774C725D6E1B32774 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E300947108F08DA76230DE1D /* Pods-RTT.debug.xcconfig */,
-				C90004A226A2D11096F6686D /* Pods-RTT.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,11 +127,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E514DDAD20710C57000AB8E1 /* Build configuration list for PBXNativeTarget "RTT" */;
 			buildPhases = (
-				36F1F7C52B510C4D4E397E98 /* [CP] Check Pods Manifest.lock */,
 				E514DD9720710C57000AB8E1 /* Sources */,
 				E514DD9820710C57000AB8E1 /* Frameworks */,
 				E514DD9920710C57000AB8E1 /* Resources */,
-				4229198784F7A3E3CE3CF6EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,47 +188,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		36F1F7C52B510C4D4E397E98 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RTT-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4229198784F7A3E3CE3CF6EF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RTT/Pods-RTT-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RTT/Pods-RTT-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E514DD9720710C57000AB8E1 /* Sources */ = {
@@ -403,7 +336,6 @@
 		};
 		E514DDAE20710C57000AB8E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E300947108F08DA76230DE1D /* Pods-RTT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -419,7 +351,6 @@
 		};
 		E514DDAF20710C57000AB8E1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C90004A226A2D11096F6686D /* Pods-RTT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
