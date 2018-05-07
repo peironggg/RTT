@@ -10,14 +10,27 @@ import UIKit
 
 class QuestionController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
-    @IBAction func submitButtonPressed(_ sender: UIBarButtonItem) {
+    var testScore: Int = 0
+    let defaults = UserDefaults.standard
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! TestScore
+        
+        testScore = defaults.integer(forKey: "score")
+        print(testScore)
+        destinationVC.score = testScore
+    }
+
+    @IBAction func submitButtonPressed(_ sender: Any) {
         
         let alert = UIAlertController(title: "Submit", message: "Have you finished all questions?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { (action) in
             self.performSegue(withIdentifier: "toTestScore", sender: sender)
         }))
+        present(alert, animated: true, completion: nil)
     }
+    
     
     @IBOutlet weak var collectionView1: UICollectionView!
     
