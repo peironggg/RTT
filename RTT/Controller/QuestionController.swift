@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class QuestionController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class QuestionController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
 
     var testScore: Int = 0
     let defaults = UserDefaults.standard
@@ -34,7 +35,7 @@ class QuestionController: UIViewController, UICollectionViewDataSource, UICollec
     
     @IBOutlet weak var collectionView1: UICollectionView!
     
-    var allQuestions = QuestionBank()
+    var questionBank: [Questions] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +44,12 @@ class QuestionController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView1.delegate = self
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return allQuestions.questions.count
+        return questionBank.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "prototypeCell", for: indexPath) as! QuestionCell
-        let pages = allQuestions.questions[indexPath.row]
+        let pages = questionBank[indexPath.row]
         cell.pages = pages
         return cell
     }

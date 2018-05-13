@@ -24,6 +24,7 @@
 		E52B0DB820A7E5BD006FB57D /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E52B0DB120A7D35B006FB57D /* DataModel.xcdatamodeld */; };
 		E52B0DBA20A7F0EB006FB57D /* CSVParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52B0DB920A7F0EB006FB57D /* CSVParser.framework */; };
 		E52B0DBB20A7F0EB006FB57D /* CSVParser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E52B0DB920A7F0EB006FB57D /* CSVParser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E52B0DBE20A875A9006FB57D /* CoreDataMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B0DBD20A875A9006FB57D /* CoreDataMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +63,7 @@
 		E52B0DB220A7D35B006FB57D /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		E52B0DB520A7D509006FB57D /* rttquestions.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rttquestions.csv; sourceTree = SOURCE_ROOT; };
 		E52B0DB920A7F0EB006FB57D /* CSVParser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSVParser.framework; path = Carthage/Build/iOS/CSVParser.framework; sourceTree = "<group>"; };
+		E52B0DBD20A875A9006FB57D /* CoreDataMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMethods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				E514DDA520710C57000AB8E1 /* Assets.xcassets */,
+				E52B0DBD20A875A9006FB57D /* CoreDataMethods.swift */,
 				E514DDB92074AFBA000AB8E1 /* QuestionBank.swift */,
 				E52B0DB520A7D509006FB57D /* rttquestions.csv */,
 				E52B0D8F209FF201006FB57D /* TableViewCell */,
@@ -274,6 +277,7 @@
 				E52B0DB820A7E5BD006FB57D /* DataModel.xcdatamodeld in Sources */,
 				E514DDBA2074AFBA000AB8E1 /* QuestionBank.swift in Sources */,
 				E514DD9F20710C57000AB8E1 /* AppDelegate.swift in Sources */,
+				E52B0DBE20A875A9006FB57D /* CoreDataMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
