@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import ChameleonFramework
 
 class TestScore: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
@@ -44,9 +45,9 @@ class TestScore: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let wrongRight = question.wrongOrRight
         
         if wrongRight == "true" {
-            cell.backgroundColor = UIColor.green
+            cell.backgroundColor = FlatGreen()
         } else {
-            cell.backgroundColor = UIColor.red
+            cell.backgroundColor = FlatRed()
         }
         
         return cell

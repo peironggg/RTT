@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GillSans.ttc">
+            <string>GillSans-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--RTT Cheatcode-->
         <scene sceneID="tne-QT-ifu">
@@ -18,15 +23,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RTT" translatesAutoresizingMaskIntoConstraints="NO" id="2gk-OW-TTI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="2gk-OW-TTI">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lZ-tW-Zgv">
-                                <rect key="frame" x="120" y="378" width="135" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.62551912586364922" green="0.40142628871186203" blue="0.33688014097330921" alpha="0.47915774828767121" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
-                                <state key="normal" title="BEGIN"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4pH-tb-gvD">
+                                <rect key="frame" x="112" y="159" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="7sL-bh-CQD"/>
+                                    <constraint firstAttribute="height" constant="150" id="Ej3-XZ-Vhf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lZ-tW-Zgv">
+                                <rect key="frame" x="137" y="483" width="100" height="50"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BKQ-qP-Ts5"/>
+                                    <constraint firstAttribute="width" constant="100" id="UGl-ha-cGL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="ElQ-nh-AqY" kind="show" id="VUW-2M-pFF"/>
                                 </connections>
@@ -35,7 +53,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2gk-OW-TTI" secondAttribute="trailing" id="Bg0-sc-apv"/>
+                            <constraint firstItem="7lZ-tW-Zgv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cow-Nc-Wde"/>
                             <constraint firstItem="2gk-OW-TTI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F3B-yz-GeX"/>
+                            <constraint firstItem="4pH-tb-gvD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MGh-ac-yRM"/>
+                            <constraint firstItem="4pH-tb-gvD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="epL-g3-R6f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7lZ-tW-Zgv" secondAttribute="bottom" constant="134" id="tkX-Tj-Sxa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2gk-OW-TTI" secondAttribute="bottom" id="uCd-pF-ioy"/>
                             <constraint firstItem="2gk-OW-TTI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zvO-yu-xGp"/>
                         </constraints>
@@ -48,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="133"/>
+            <point key="canvasLocation" x="296.80000000000001" y="132.68365817091455"/>
         </scene>
         <!--Test-->
         <scene sceneID="N6E-dC-uMr">
@@ -80,8 +102,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="dD2-aT-9p3"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="34"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJs-ts-bWo" userLabel="answerOneButton">
@@ -90,7 +112,9 @@
                                                         <constraint firstAttribute="height" constant="100" id="JQX-VI-LF3"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                    <state key="normal" title="12"/>
+                                                    <state key="normal" title="12">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="answerButton:" destination="C0A-Z7-TkM" eventType="touchUpInside" id="hTo-iJ-ieS"/>
                                                     </connections>
@@ -101,7 +125,9 @@
                                                         <constraint firstAttribute="height" constant="100" id="lHJ-qT-K9b"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                    <state key="normal" title="14"/>
+                                                    <state key="normal" title="14">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="answerButton:" destination="C0A-Z7-TkM" eventType="touchUpInside" id="WdO-Py-zYT"/>
                                                     </connections>
@@ -112,7 +138,9 @@
                                                         <constraint firstAttribute="height" constant="100" id="KfL-bG-kZl"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                    <state key="normal" title="8"/>
+                                                    <state key="normal" title="8">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="answerButton:" destination="C0A-Z7-TkM" eventType="touchUpInside" id="k1g-RF-US7"/>
                                                     </connections>
@@ -230,6 +258,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="RTT" width="1588" height="2246"/>
+        <image name="LaunchIcon" width="1536" height="1536"/>
+        <image name="LaunchScreen" width="1536" height="1536"/>
     </resources>
 </document>

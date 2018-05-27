@@ -10,15 +10,19 @@ import UIKit
 import CoreData
 
 class CoreDataMethods {
-func loadQuestions(questionBank: inout [Questions]) -> [Questions] {
+static func loadQuestions() -> [Questions] {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
+    var questionBank: [Questions] = []
     let request: NSFetchRequest<Questions> = Questions.fetchRequest()
     do {
         questionBank = try context.fetch(request)
+        
+        
     } catch {
         print("Unable to fetch request, \(error)")
+
     }
     return questionBank
+    
 }
 }

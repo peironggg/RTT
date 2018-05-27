@@ -34,8 +34,7 @@ class QuestionController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     @IBOutlet weak var collectionView1: UICollectionView!
-    
-    var questionBank: [Questions] = []
+            var questionBank = CoreDataMethods.loadQuestions()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +48,7 @@ class QuestionController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "prototypeCell", for: indexPath) as! QuestionCell
+
         let pages = questionBank[indexPath.row]
         cell.pages = pages
         return cell

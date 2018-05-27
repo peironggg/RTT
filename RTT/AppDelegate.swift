@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             do {
                 let csv = try CSVParser(filePath: path)
                 for item in csv {
-                    print(item)
+                    
                     let question = Questions(context: persistentContainer.viewContext)
                     question.questionTitle = item[0]
                     question.correctAnswer = item[1]
@@ -61,8 +61,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
         let defaults = UserDefaults.standard
+        var score = defaults.integer(forKey: "score")
+        score = 0
+        defaults.set(score, forKey: "score")
         let isPreloaded = defaults.bool(forKey: "isPreloaded")
         if !isPreloaded {
             preloadData()
