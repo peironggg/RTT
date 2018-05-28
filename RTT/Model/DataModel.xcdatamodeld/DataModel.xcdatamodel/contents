@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Questions" representedClassName="Questions" syncable="YES" codeGenerationType="class">
         <attribute name="answerOne" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answerThree" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answerTwo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chosenAnswer" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="correctAnswer" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="questionTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="wrongOrRight" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Questions" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Questions" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

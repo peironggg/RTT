@@ -11,11 +11,13 @@ import CoreData
 
 class QuestionController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
 
+    @IBOutlet weak var collectionView1: UICollectionView!
     var testScore: Int = 0
     let defaults = UserDefaults.standard
+    var questionBank = CoreDataMethods.loadQuestions()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! TestScore
+        let destinationVC = segue.destination as! TestScoreController
         
         testScore = defaults.integer(forKey: "score")
         print(testScore)
@@ -32,15 +34,10 @@ class QuestionController: UIViewController, UICollectionViewDataSource, UICollec
         present(alert, animated: true, completion: nil)
     }
     
-    
-    @IBOutlet weak var collectionView1: UICollectionView!
-            var questionBank = CoreDataMethods.loadQuestions()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        collectionView1.dataSource = self
         collectionView1.delegate = self
+        collectionView1.dataSource = self
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return questionBank.count
@@ -48,7 +45,6 @@ class QuestionController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "prototypeCell", for: indexPath) as! QuestionCell
-
         let pages = questionBank[indexPath.row]
         cell.pages = pages
         return cell

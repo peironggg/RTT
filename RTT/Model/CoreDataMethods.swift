@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 class CoreDataMethods {
+    
 static func loadQuestions() -> [Questions] {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var questionBank: [Questions] = []

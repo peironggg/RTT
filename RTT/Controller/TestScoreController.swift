@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import ChameleonFramework
 
-class TestScore: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TestScoreController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
     
     @IBOutlet weak var resultsTableView: UITableView!
@@ -18,7 +18,7 @@ class TestScore: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var score: Int = 0
     var questionBank:[Questions] = []
     let defaults = UserDefaults.standard
-
+    var indexNumber: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +30,15 @@ class TestScore: UIViewController, UITableViewDataSource, UITableViewDelegate {
         loadQuestions()
         configureTableView()
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       let destinationVC = segue.destination as? ReviewController
+        destinationVC?.indexNumber = indexNumber
+    }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       indexNumber = indexPath.row
+        performSegue(withIdentifier: "goToReview", sender: self)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return questionBank.count
