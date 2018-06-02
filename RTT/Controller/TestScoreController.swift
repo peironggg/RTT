@@ -16,7 +16,7 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var resultsTableView: UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var score: Int = 0
-    var questionBank:[Questions] = []
+    var questionBank:[Questions] = CoreDataMethods.loadQuestions()
     let defaults = UserDefaults.standard
     var indexNumber: Int = 0
     
@@ -27,7 +27,6 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         score = defaults.integer(forKey: "score")
         navigationItem.title = "Score: \(score)/3"
         resultsTableView.register(UINib(nibName: "customResultCell", bundle: nil), forCellReuseIdentifier: "resultCell")
-        loadQuestions()
         configureTableView()
         self.navigationItem.hidesBackButton = true
     }
@@ -62,16 +61,7 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         
         return cell
     }
-    func loadQuestions() {
-        let sort = NSSortDescriptor(key: "questionNumber", ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))
-        let request: NSFetchRequest<Questions> = Questions.fetchRequest()
-        request.sortDescriptors = [sort]
-        do {
-            questionBank = try context.fetch(request)
-        } catch {
-            print("Unable to fetch request, \(error)")
-        }
-    }
+   
     
     func configureTableView() {
         resultsTableView.rowHeight = UITableViewAutomaticDimension
