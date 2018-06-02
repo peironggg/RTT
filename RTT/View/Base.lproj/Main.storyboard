@@ -167,7 +167,6 @@
                                             <outlet property="answerThreeButton" destination="58M-WG-9gx" id="ECR-PI-Lhn"/>
                                             <outlet property="answerTwoButton" destination="lo8-Lk-4gj" id="H70-sW-uku"/>
                                             <outlet property="questionLabel" destination="nJJ-yv-srJ" id="px5-F0-idV"/>
-                                            <segue destination="cy7-84-eyP" kind="show" identifier="toTestScore" id="CgZ-3L-rB1"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -195,6 +194,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView1" destination="CxY-BT-oxK" id="Jku-xh-0Xn"/>
+                        <segue destination="cy7-84-eyP" kind="show" identifier="toTestScore" id="Ans-ok-roa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dh-TV-Yml" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -49,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     question.answerThree = item[4]
                     question.wrongOrRight = item[5]
                     question.chosenAnswer = item[6]
+                    question.questionNumber = item[7]
                     try persistentContainer.viewContext.save()
                 }
             } catch {

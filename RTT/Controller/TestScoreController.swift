@@ -29,6 +29,7 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         resultsTableView.register(UINib(nibName: "customResultCell", bundle: nil), forCellReuseIdentifier: "resultCell")
         loadQuestions()
         configureTableView()
+        self.navigationItem.hidesBackButton = true
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        let destinationVC = segue.destination as? ReviewController
@@ -47,6 +48,7 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = resultsTableView.dequeueReusableCell(withIdentifier: "resultCell", for: indexPath) as! ResultCell
         let question = questionBank[indexPath.row]
+        print("number: \(question.questionNumber)")
         cell.qLabel.text = question.questionTitle
         cell.qNumber.text = String(indexPath.row + 1)
         let wrongRight = question.wrongOrRight
@@ -60,13 +62,16 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     func loadQuestions() {
+        let sort = NSSortDescriptor(key: "questionNumber", ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))
         let request: NSFetchRequest<Questions> = Questions.fetchRequest()
+        request.sortDescriptors = [sort]
         do {
             questionBank = try context.fetch(request)
         } catch {
             print("Unable to fetch request, \(error)")
         }
     }
+    
     func configureTableView() {
         resultsTableView.rowHeight = UITableViewAutomaticDimension
         resultsTableView.estimatedRowHeight = 120
