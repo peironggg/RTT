@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import ChameleonFramework
+import GoogleMobileAds
 
 class TestScoreController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
@@ -19,9 +20,22 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
     var questionBank:[Questions] = CoreDataMethods.loadQuestions()
     let defaults = UserDefaults.standard
     var indexNumber: Int = 0
+    var interstitial: GADInterstitial!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if interstitial.isReady {
+            interstitial.present(fromRootViewController: self)
+        } else {
+            print("Ad wasn't ready")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2874449241829817/6749174202")
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        interstitial.load(request)
         resultsTableView.delegate = self
         resultsTableView.dataSource = self
         score = defaults.integer(forKey: "score")

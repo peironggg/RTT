@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import CSVParser
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -63,6 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-2874449241829817/6749174202")
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         let defaults = UserDefaults.standard
         var score = defaults.integer(forKey: "score")
