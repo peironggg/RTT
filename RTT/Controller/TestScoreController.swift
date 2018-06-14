@@ -22,14 +22,17 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
     var indexNumber: Int = 0
     var interstitial: GADInterstitial!
     
-    @IBAction func playButtonPressed(_ sender: Any) {
-        if interstitial.isReady {
-            interstitial.present(fromRootViewController: self)
-            interstitial = creatAd()
-        } else {
-            print("Ad wasn't ready")
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            if self.interstitial.isReady {
+                self.interstitial.present(fromRootViewController: self)
+                self.interstitial = self.creatAd()
+            } else {
+                print("Ad wasn't ready")
+            }
         }
-    }
+        }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +47,8 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         resultsTableView.register(UINib(nibName: "customResultCell", bundle: nil), forCellReuseIdentifier: "resultCell")
         configureTableView()
         self.navigationItem.hidesBackButton = true
-        let button = UIBarButtonItem(title: "Ads", style: UIBarButtonItemStyle.plain, target: self, action: #selector(playButtonPressed(_:)))
-        self.navigationItem.rightBarButtonItem = button
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        let destinationVC = segue.destination as? ReviewController
         destinationVC?.indexNumber = indexNumber
