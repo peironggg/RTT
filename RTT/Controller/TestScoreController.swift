@@ -22,17 +22,18 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
     var indexNumber: Int = 0
     var interstitial: GADInterstitial!
     
-    override func viewDidAppear(_ animated: Bool) {
+    @IBAction func playButtonPressed(_ sender: Any) {
         if interstitial.isReady {
             interstitial.present(fromRootViewController: self)
+            interstitial = creatAd()
         } else {
             print("Ad wasn't ready")
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2874449241829817/6749174202")
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
         let request = GADRequest()
         request.testDevices = [kGADSimulatorID]
         interstitial.load(request)
@@ -43,6 +44,8 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         resultsTableView.register(UINib(nibName: "customResultCell", bundle: nil), forCellReuseIdentifier: "resultCell")
         configureTableView()
         self.navigationItem.hidesBackButton = true
+        let button = UIBarButtonItem(title: "Ads", style: UIBarButtonItemStyle.plain, target: self, action: #selector(playButtonPressed(_:)))
+        self.navigationItem.rightBarButtonItem = button
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        let destinationVC = segue.destination as? ReviewController
@@ -80,5 +83,13 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
     func configureTableView() {
         resultsTableView.rowHeight = UITableViewAutomaticDimension
         resultsTableView.estimatedRowHeight = 120
+    }
+    
+    func creatAd() -> GADInterstitial {
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        interstitial.load(request)
+        return interstitial
     }
 }
