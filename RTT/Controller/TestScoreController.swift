@@ -23,7 +23,7 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
     var interstitial: GADInterstitial!
     
     override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             if self.interstitial.isReady {
                 self.interstitial.present(fromRootViewController: self)
                 self.interstitial = self.creatAd()
@@ -36,9 +36,9 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2874449241829817/6749174202")
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
+//        request.testDevices = [kGADSimulatorID]
         interstitial.load(request)
         resultsTableView.delegate = self
         resultsTableView.dataSource = self
