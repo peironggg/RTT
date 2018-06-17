@@ -32,6 +32,8 @@ class QuestionController: UIViewController, UICollectionViewDataSource, UICollec
         alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { (action) in
             self.performSegue(withIdentifier: "toTestScore", sender: sender)
         }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+        }))
         present(alert, animated: true, completion: nil)
     }
     

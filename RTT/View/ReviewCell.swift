@@ -24,6 +24,18 @@ class ReviewCell: UICollectionViewCell {
         }
     }
     func updateUI() {
+        answerOneButton.titleLabel?.minimumScaleFactor = 0.5
+        answerOneButton.titleLabel?.numberOfLines = 2
+        answerOneButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        answerTwoButton.titleLabel?.minimumScaleFactor = 0.5
+        answerTwoButton.titleLabel?.numberOfLines = 2
+        answerTwoButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        answerThreeButton.titleLabel?.minimumScaleFactor = 0.5
+        answerThreeButton.titleLabel?.numberOfLines = 2
+        answerThreeButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        
         answerOneButton.backgroundColor = UIColor(hexString: "e67e22")
         answerTwoButton.backgroundColor = UIColor(hexString: "e67e22")
         answerThreeButton.backgroundColor = UIColor(hexString: "e67e22")

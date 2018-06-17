@@ -26,7 +26,7 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             if self.interstitial.isReady {
                 self.interstitial.present(fromRootViewController: self)
-                self.interstitial = self.creatAd()
+//                self.interstitial = self.createAd()
             } else {
                 print("Ad wasn't ready")
             }
@@ -43,7 +43,7 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         resultsTableView.delegate = self
         resultsTableView.dataSource = self
         score = defaults.integer(forKey: "score")
-        navigationItem.title = "Score: \(score)/3"
+        navigationItem.title = "Score: \(score)/14"
         resultsTableView.register(UINib(nibName: "customResultCell", bundle: nil), forCellReuseIdentifier: "resultCell")
         configureTableView()
         self.navigationItem.hidesBackButton = true
@@ -86,12 +86,12 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         resultsTableView.rowHeight = UITableViewAutomaticDimension
         resultsTableView.estimatedRowHeight = 120
     }
-    
-    func creatAd() -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
-        interstitial.load(request)
-        return interstitial
-    }
+//
+//    func createAd() -> GADInterstitial {
+//        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+//        let request = GADRequest()
+//        request.testDevices = [kGADSimulatorID]
+//        interstitial.load(request)
+//        return interstitial
+//    }
 }
