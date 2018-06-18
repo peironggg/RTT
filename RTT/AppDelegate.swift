@@ -8,13 +8,39 @@
 
 import UIKit
 import CoreData
-import CSVParser
 import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    func parseCSV() {
+     
+        let fileURL = Bundle.main.url(forResource: "rttquestions", withExtension: "csv")
+        removeData()
+        do {
+            let content = try String(contentsOf: fileURL!, encoding: String.Encoding.utf8)
+            let parsedCSV = content.components(separatedBy: "\n").map{ $0.components(separatedBy: ",")}
+            print(parsedCSV)
+            for item in parsedCSV {
+                
+                let question = Questions(context: persistentContainer.viewContext)
+                question.questionTitle = item[0]
+                question.correctAnswer = item[1]
+                question.answerOne = item[2]
+                question.answerTwo = item[3]
+                question.answerThree = item[4]
+                question.wrongOrRight = item[5]
+                question.chosenAnswer = item[6]
+                question.questionNumber = item[7]
+                try persistentContainer.viewContext.save()
+            }
+            print(parsedCSV)
+        } catch {
+            print("\(error)")
+        }
+    }
     
     func removeData () {
         // Remove the existing items
@@ -32,36 +58,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     }
 
-    func preloadData () {
-        // Retrieve data from the source file
-        if let path = Bundle.main.path(forResource: "rttquestions", ofType: "csv") {
-
-            // Remove all the menu items before preloading
-            removeData()
-            do {
-                let csv = try CSVParser(filePath: path)
-                for item in csv {
-                    
-                    let question = Questions(context: persistentContainer.viewContext)
-                    question.questionTitle = item[0]
-                    question.correctAnswer = item[1]
-                    question.answerOne = item[2]
-                    question.answerTwo = item[3]
-                    question.answerThree = item[4]
-                    question.wrongOrRight = item[5]
-                    question.chosenAnswer = item[6]
-                    question.questionNumber = item[7]
-                    try persistentContainer.viewContext.save()
-                }
-            } catch {
-                print("Unable to parse file, \(error)")
-            }
-            
-            
-            
-        }
-    }
-    
+//    func preloadData () {
+//        // Retrieve data from the source file
+//        if let path = Bundle.main.path(forResource: "rttquestions", ofType: "csv") {
+//
+//            // Remove all the menu items before preloading
+//            removeData()
+//            do {
+//                let csv = try CSVParser(filePath: path)
+//                for item in csv {
+//
+//                    let question = Questions(context: persistentContainer.viewContext)
+//                    question.questionTitle = item[0]
+//                    question.correctAnswer = item[1]
+//                    question.answerOne = item[2]
+//                    question.answerTwo = item[3]
+//                    question.answerThree = item[4]
+//                    question.wrongOrRight = item[5]
+//                    question.chosenAnswer = item[6]
+//                    question.questionNumber = item[7]
+//                    try persistentContainer.viewContext.save()
+//                }
+//            } catch {
+//                print("Unable to parse file, \(error)")
+//            }
+//
+//
+//
+//        }
+//    }
+//
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         GADMobileAds.configure(withApplicationID: "ca-app-pub-2874449241829817~8379495234")
@@ -72,7 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaults.set(score, forKey: "score")
         let isPreloaded = defaults.bool(forKey: "isPreloaded")
         if !isPreloaded {
-            preloadData()
+            parseCSV()
             defaults.set(true, forKey: "isPreloaded")
         }
         return true
@@ -80,7 +106,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data stack
     
-    lazy var persistentContainer: NSPersistentContainer = {
+        lazy var persistentContainer: NSPersistentContainer = {
         
         let container = NSPersistentContainer(name: "DataModel")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -108,4 +134,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
 

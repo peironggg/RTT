@@ -25,7 +25,7 @@ class WelcomeController: UIViewController {
         beginButton.layer.addSublayer(border)
         beginButton.layer.masksToBounds = true
         beginButton.backgroundColor = UIColor(hexString: "e74c3c")
-        
+
     }
 
    

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6EB7E5C59345D0D083BA8C95 /* Pods_RTT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F530940D0791D1C65521455 /* Pods_RTT.framework */; };
+		1A375DC4D8EC39C0F2C49F3B /* Pods_RTT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C73BA6F635C843D38124959 /* Pods_RTT.framework */; };
 		E514DD9F20710C57000AB8E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DD9E20710C57000AB8E1 /* AppDelegate.swift */; };
 		E514DDA120710C57000AB8E1 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DDA020710C57000AB8E1 /* WelcomeController.swift */; };
 		E514DDA420710C57000AB8E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E514DDA220710C57000AB8E1 /* Main.storyboard */; };
@@ -19,8 +19,6 @@
 		E52B0D8E209FF1F0006FB57D /* customResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52B0D8C209FF1F0006FB57D /* customResultCell.xib */; };
 		E52B0DB620A7D50A006FB57D /* rttquestions.csv in Resources */ = {isa = PBXBuildFile; fileRef = E52B0DB520A7D509006FB57D /* rttquestions.csv */; };
 		E52B0DB820A7E5BD006FB57D /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E52B0DB120A7D35B006FB57D /* DataModel.xcdatamodeld */; };
-		E52B0DBA20A7F0EB006FB57D /* CSVParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52B0DB920A7F0EB006FB57D /* CSVParser.framework */; };
-		E52B0DBB20A7F0EB006FB57D /* CSVParser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E52B0DB920A7F0EB006FB57D /* CSVParser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E52B0DBE20A875A9006FB57D /* CoreDataMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B0DBD20A875A9006FB57D /* CoreDataMethods.swift */; };
 		E5702D3920B12AAB00C3CF67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5702D3820B12AAB00C3CF67 /* LaunchScreen.storyboard */; };
 		E5702D3D20B12FEF00C3CF67 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5702D3C20B12FEF00C3CF67 /* Images.xcassets */; };
@@ -35,7 +33,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E52B0DBB20A7F0EB006FB57D /* CSVParser.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,9 +40,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0B6B5451E1B002E4A21C58C6 /* Pods-RTT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTT.release.xcconfig"; path = "Pods/Target Support Files/Pods-RTT/Pods-RTT.release.xcconfig"; sourceTree = "<group>"; };
-		4F530940D0791D1C65521455 /* Pods_RTT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C175B62CBD733928D482287 /* Pods-RTT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RTT/Pods-RTT.debug.xcconfig"; sourceTree = "<group>"; };
+		1C73BA6F635C843D38124959 /* Pods_RTT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		738B42267D4FF88792D3736E /* Pods-RTT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RTT/Pods-RTT.debug.xcconfig"; sourceTree = "<group>"; };
+		DD45C4A1A0A30EE3FE816FD8 /* Pods-RTT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTT.release.xcconfig"; path = "Pods/Target Support Files/Pods-RTT/Pods-RTT.release.xcconfig"; sourceTree = "<group>"; };
 		E514DD9B20710C57000AB8E1 /* RTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E514DD9E20710C57000AB8E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E514DDA020710C57000AB8E1 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
@@ -59,7 +56,6 @@
 		E52B0D8C209FF1F0006FB57D /* customResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customResultCell.xib; sourceTree = "<group>"; };
 		E52B0DB220A7D35B006FB57D /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		E52B0DB520A7D509006FB57D /* rttquestions.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rttquestions.csv; sourceTree = SOURCE_ROOT; };
-		E52B0DB920A7F0EB006FB57D /* CSVParser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSVParser.framework; path = Carthage/Build/iOS/CSVParser.framework; sourceTree = "<group>"; };
 		E52B0DBD20A875A9006FB57D /* CoreDataMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMethods.swift; sourceTree = "<group>"; };
 		E5702D3820B12AAB00C3CF67 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5702D3C20B12FEF00C3CF67 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -72,8 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E52B0DBA20A7F0EB006FB57D /* CSVParser.framework in Frameworks */,
-				6EB7E5C59345D0D083BA8C95 /* Pods_RTT.framework in Frameworks */,
+				1A375DC4D8EC39C0F2C49F3B /* Pods_RTT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +78,7 @@
 		47C93F1E4078794A52CC3A33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4F530940D0791D1C65521455 /* Pods_RTT.framework */,
+				1C73BA6F635C843D38124959 /* Pods_RTT.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,8 +86,8 @@
 		D05B9B70437C163638ABC7D2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7C175B62CBD733928D482287 /* Pods-RTT.debug.xcconfig */,
-				0B6B5451E1B002E4A21C58C6 /* Pods-RTT.release.xcconfig */,
+				738B42267D4FF88792D3736E /* Pods-RTT.debug.xcconfig */,
+				DD45C4A1A0A30EE3FE816FD8 /* Pods-RTT.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -100,7 +95,6 @@
 		E514DD9220710C57000AB8E1 = {
 			isa = PBXGroup;
 			children = (
-				E52B0DB920A7F0EB006FB57D /* CSVParser.framework */,
 				E514DDB520710E2C000AB8E1 /* Default-568h@2x.png */,
 				E514DD9D20710C57000AB8E1 /* RTT */,
 				E514DD9C20710C57000AB8E1 /* Products */,
@@ -179,12 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E514DDAD20710C57000AB8E1 /* Build configuration list for PBXNativeTarget "RTT" */;
 			buildPhases = (
-				F561976F6654C4441B6D05A2 /* [CP] Check Pods Manifest.lock */,
+				EB615AF3DA43FD380BB98108 /* [CP] Check Pods Manifest.lock */,
 				E514DD9720710C57000AB8E1 /* Sources */,
 				E514DD9820710C57000AB8E1 /* Frameworks */,
 				E514DD9920710C57000AB8E1 /* Resources */,
 				E52B0DBC20A7F0EB006FB57D /* Embed Frameworks */,
-				AA45EE53474F9FF1A02EFC5C /* [CP] Embed Pods Frameworks */,
+				6BBAA0C968CA0CAF67DE13DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,7 +196,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Wu Peirong";
 				TargetAttributes = {
 					E514DD9A20710C57000AB8E1 = {
@@ -246,7 +240,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AA45EE53474F9FF1A02EFC5C /* [CP] Embed Pods Frameworks */ = {
+		6BBAA0C968CA0CAF67DE13DC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -264,7 +258,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RTT/Pods-RTT-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F561976F6654C4441B6D05A2 /* [CP] Check Pods Manifest.lock */ = {
+		EB615AF3DA43FD380BB98108 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,6 +324,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -337,6 +332,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -387,6 +383,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -394,6 +391,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -417,6 +415,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -425,9 +424,11 @@
 		};
 		E514DDAE20710C57000AB8E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C175B62CBD733928D482287 /* Pods-RTT.debug.xcconfig */;
+			baseConfigurationReference = 738B42267D4FF88792D3736E /* Pods-RTT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JS6NFR972X;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -438,6 +439,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peirong.RTT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -445,9 +447,11 @@
 		};
 		E514DDAF20710C57000AB8E1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B6B5451E1B002E4A21C58C6 /* Pods-RTT.release.xcconfig */;
+			baseConfigurationReference = DD45C4A1A0A30EE3FE816FD8 /* Pods-RTT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JS6NFR972X;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -458,6 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peirong.RTT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

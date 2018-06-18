@@ -74,8 +74,10 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         
         if wrongRight == "true" {
             cell.backgroundColor = FlatGreen()
+
         } else {
             cell.backgroundColor = FlatRed()
+
         }
         
         return cell
