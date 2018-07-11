@@ -12,11 +12,13 @@ import ChameleonFramework
 
 class WelcomeController: UIViewController {
 
+    @IBOutlet weak var launchIcon: UIImageView!
     @IBOutlet weak var beginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        beginButton.layer.cornerRadius = 10
+        beginButton.translatesAutoresizingMaskIntoConstraints = false
         let border = CALayer()
         let width = CGFloat(6.0)
         border.borderColor = FlatBlack().cgColor
@@ -25,6 +27,17 @@ class WelcomeController: UIViewController {
         beginButton.layer.addSublayer(border)
         beginButton.layer.masksToBounds = true
         beginButton.backgroundColor = UIColor(hexString: "e74c3c")
+//        view.addSubview(beginButton)
+//        beginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        beginButton.topAnchor.constraint(equalTo: view.topAnchor, constant: (view.frame.height)/1.5).isActive = true
+//        beginButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
+//        beginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+//        view.addSubview(launchIcon)
+//        launchIcon.widthAnchor.constraint(equalToConstant: 150).isActive = true
+//        launchIcon.heightAnchor.constraint(equalToConstant: 150).isActive = true
+//        launchIcon.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        launchIcon.topAnchor.constraintEqualToSystemSpacingBelow(view.topAnchor, multiplier: (view.frame.height)/2.5).isActive = true
+        
 
     }
 

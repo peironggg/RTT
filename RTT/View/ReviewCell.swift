@@ -24,6 +24,14 @@ class ReviewCell: UICollectionViewCell {
         }
     }
     func updateUI() {
+        self.backgroundColor = UIColor(hexString: "34495e")
+        answerOneButton.layer.borderWidth = 2.0
+        answerOneButton.layer.borderColor = FlatBlack().cgColor
+        answerTwoButton.layer.borderWidth = 2.0
+        answerTwoButton.layer.borderColor = FlatBlack().cgColor
+        answerThreeButton.layer.borderWidth = 2.0
+        answerThreeButton.layer.borderColor = FlatBlack().cgColor
+        
         answerOneButton.titleLabel?.minimumScaleFactor = 0.5
         answerOneButton.titleLabel?.numberOfLines = 2
         answerOneButton.titleLabel?.adjustsFontSizeToFitWidth = true
@@ -39,10 +47,10 @@ class ReviewCell: UICollectionViewCell {
         answerOneButton.backgroundColor = UIColor(hexString: "e67e22")
         answerTwoButton.backgroundColor = UIColor(hexString: "e67e22")
         answerThreeButton.backgroundColor = UIColor(hexString: "e67e22")
-        if pages?.wrongOrRight == "true" {
-            displayCorrectButtonColor()
-        } else if pages?.wrongOrRight == "false" {
-            displayCorrectButtonColor()
+        
+        displayCorrectButtonColor()
+        
+         if pages?.wrongOrRight == "false" {
             if pages?.chosenAnswer == "1"{
                 answerOneButton.backgroundColor = FlatRed()
             } else if pages?.chosenAnswer == "2" {
@@ -51,14 +59,6 @@ class ReviewCell: UICollectionViewCell {
                 answerThreeButton.backgroundColor = FlatRed()
             }
         }
-        
-        self.backgroundColor = UIColor(hexString: "34495e")
-        answerOneButton.layer.borderWidth = 2.0
-        answerOneButton.layer.borderColor = FlatBlack().cgColor
-        answerTwoButton.layer.borderWidth = 2.0
-        answerTwoButton.layer.borderColor = FlatBlack().cgColor
-        answerThreeButton.layer.borderWidth = 2.0
-        answerThreeButton.layer.borderColor = FlatBlack().cgColor
     }
     
     func displayCorrectButtonColor() {

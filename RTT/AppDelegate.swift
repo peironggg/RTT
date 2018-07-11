@@ -58,37 +58,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     }
 
-//    func preloadData () {
-//        // Retrieve data from the source file
-//        if let path = Bundle.main.path(forResource: "rttquestions", ofType: "csv") {
-//
-//            // Remove all the menu items before preloading
-//            removeData()
-//            do {
-//                let csv = try CSVParser(filePath: path)
-//                for item in csv {
-//
-//                    let question = Questions(context: persistentContainer.viewContext)
-//                    question.questionTitle = item[0]
-//                    question.correctAnswer = item[1]
-//                    question.answerOne = item[2]
-//                    question.answerTwo = item[3]
-//                    question.answerThree = item[4]
-//                    question.wrongOrRight = item[5]
-//                    question.chosenAnswer = item[6]
-//                    question.questionNumber = item[7]
-//                    try persistentContainer.viewContext.save()
-//                }
-//            } catch {
-//                print("Unable to parse file, \(error)")
-//            }
-//
-//
-//
-//        }
-//    }
-//
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         GADMobileAds.configure(withApplicationID: "ca-app-pub-2874449241829817~8379495234")
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
