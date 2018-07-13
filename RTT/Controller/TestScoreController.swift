@@ -44,9 +44,14 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         resultsTableView.dataSource = self
         score = defaults.integer(forKey: "score")
         navigationItem.title = "Score: \(score)/14"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(barButtonTapped))
         resultsTableView.register(UINib(nibName: "customResultCell", bundle: nil), forCellReuseIdentifier: "resultCell")
         configureTableView()
         self.navigationItem.hidesBackButton = true
+    }
+    
+    @objc func barButtonTapped() {
+        navigationController?.popToRootViewController(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
