@@ -52,7 +52,7 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-2874449241829817/1942205041"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }

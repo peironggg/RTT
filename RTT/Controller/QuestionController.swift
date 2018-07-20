@@ -47,7 +47,7 @@ class QuestionController: UIViewController, UICollectionViewDataSource, UICollec
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-2874449241829817/4871636627"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }
