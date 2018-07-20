@@ -43,7 +43,7 @@ class ReviewController: UIViewController, UICollectionViewDelegate, UICollection
         
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-2874449241829817/9437551689"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }
