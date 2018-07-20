@@ -20,26 +20,27 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
     var questionBank:[Questions] = CoreDataMethods.loadQuestions()
     let defaults = UserDefaults.standard
     var indexNumber: Int = 0
-    var interstitial: GADInterstitial!
+    var bannerView: GADBannerView!
+//    var interstitial: GADInterstitial!
     
-    override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-            if self.interstitial.isReady {
-                self.interstitial.present(fromRootViewController: self)
+//    override func viewDidAppear(_ animated: Bool) {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//            if self.interstitial.isReady {
+//                self.interstitial.present(fromRootViewController: self)
 //                self.interstitial = self.createAd()
-            } else {
-                print("Ad wasn't ready")
-            }
-        }
-        }
+//            } else {
+//                print("Ad wasn't ready")
+//            }
+//        }
+//        }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2874449241829817/6749174202")
-        let request = GADRequest()
+//        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2874449241829817/6749174202")
+//        let request = GADRequest()
 //        request.testDevices = [kGADSimulatorID]
-        interstitial.load(request)
+//        interstitial.load(request)
         resultsTableView.delegate = self
         resultsTableView.dataSource = self
         score = defaults.integer(forKey: "score")
@@ -48,6 +49,33 @@ class TestScoreController: UIViewController, UITableViewDataSource, UITableViewD
         resultsTableView.register(UINib(nibName: "customResultCell", bundle: nil), forCellReuseIdentifier: "resultCell")
         configureTableView()
         self.navigationItem.hidesBackButton = true
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+    }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
     }
     
     @objc func barButtonTapped() {

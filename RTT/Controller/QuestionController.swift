@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import ChameleonFramework
+import GoogleMobileAds
 
 class QuestionController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
 
@@ -17,6 +18,7 @@ class QuestionController: UIViewController, UICollectionViewDataSource, UICollec
     var testScore: Int = 0
     let defaults = UserDefaults.standard
     var questionBank = CoreDataMethods.loadQuestions()
+    var bannerView: GADBannerView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! TestScoreController
@@ -42,7 +44,35 @@ class QuestionController: UIViewController, UICollectionViewDataSource, UICollec
         super.viewDidLoad()
         collectionView1.delegate = self
         collectionView1.dataSource = self
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return questionBank.count
     }
