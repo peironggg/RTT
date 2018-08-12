@@ -39,7 +39,7 @@ class QuestionController2:  UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "prototypeCell2", for: indexPath) as! QuestionCell2
         let pages = questionBank[indexPath.row]
-//        cell.pages = pages
+        cell.pages = pages
         return cell
     }
     
