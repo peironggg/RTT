@@ -15,6 +15,7 @@ class WelcomeController: UIViewController, SKProductsRequestDelegate, SKPaymentT
     
     var list = [SKProduct]()
     var p = SKProduct()
+    let defaults = UserDefaults.standard
     
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         print("requesting product")
@@ -52,7 +53,7 @@ class WelcomeController: UIViewController, SKProductsRequestDelegate, SKPaymentT
         
         for transaction: AnyObject in transactions {
             let trans = transaction as! SKPaymentTransaction
-            print(trans.error!)
+//            print(trans.error!)
             
             switch trans.transactionState {
             case .purchased:
@@ -63,6 +64,7 @@ class WelcomeController: UIViewController, SKProductsRequestDelegate, SKPaymentT
                 switch prodID {
                 case "peirong.rtt.extraquestions":
                     print("extra questions unlocked")
+                    defaults.set(true, forKey: "peirong.rtt.extraquestions")
                     performSegue(withIdentifier: "goToQuestionController2", sender: self)
                     
                 default:
@@ -124,6 +126,9 @@ class WelcomeController: UIViewController, SKProductsRequestDelegate, SKPaymentT
     
     
     @IBAction func allQuestionsButtonPressed(_ sender: UIButton) {
+        if defaults.bool(forKey: "peirong.rtt.extraquestions") == true {
+            performSegue(withIdentifier: "goToQuestionController2", sender: self)
+        } else {
 
             print("adding extra questions")
             for product in list {
@@ -133,7 +138,7 @@ class WelcomeController: UIViewController, SKProductsRequestDelegate, SKPaymentT
                     buyProduct()
                 }
             }
-        
+        }
     }
     
     func buyProduct() {

@@ -23,7 +23,6 @@
 		E5702D3D20B12FEF00C3CF67 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5702D3C20B12FEF00C3CF67 /* Images.xcassets */; };
 		E5B7212B20BC1BFA008B9C5C /* ReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B7212A20BC1BFA008B9C5C /* ReviewController.swift */; };
 		E5B7212D20BC217F008B9C5C /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B7212C20BC217F008B9C5C /* ReviewCell.swift */; };
-		E5CCF62921202AAC005DEDC0 /* IAPhandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CCF62821202AAC005DEDC0 /* IAPhandler.swift */; };
 		E5CCF62B21202D8A005DEDC0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CCF62A21202D8A005DEDC0 /* StoreKit.framework */; };
 		E5CCF62D21203272005DEDC0 /* QuestionController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CCF62C21203272005DEDC0 /* QuestionController2.swift */; };
 		E5CCF62F2120336D005DEDC0 /* QuestionCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CCF62E2120336D005DEDC0 /* QuestionCell2.swift */; };
@@ -64,7 +63,6 @@
 		E5702D3C20B12FEF00C3CF67 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E5B7212A20BC1BFA008B9C5C /* ReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewController.swift; sourceTree = "<group>"; };
 		E5B7212C20BC217F008B9C5C /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
-		E5CCF62821202AAC005DEDC0 /* IAPhandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPhandler.swift; sourceTree = "<group>"; };
 		E5CCF62A21202D8A005DEDC0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		E5CCF62C21203272005DEDC0 /* QuestionController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController2.swift; sourceTree = "<group>"; };
 		E5CCF62E2120336D005DEDC0 /* QuestionCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell2.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				E52B0D8F209FF201006FB57D /* TableViewCell */,
 				E52B0DB120A7D35B006FB57D /* DataModel.xcdatamodeld */,
 				E5702D3C20B12FEF00C3CF67 /* Images.xcassets */,
-				E5CCF62821202AAC005DEDC0 /* IAPhandler.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,7 +306,6 @@
 				E514DDB82074A89F000AB8E1 /* QuestionController.swift in Sources */,
 				E5B7212B20BC1BFA008B9C5C /* ReviewController.swift in Sources */,
 				E5CCF62D21203272005DEDC0 /* QuestionController2.swift in Sources */,
-				E5CCF62921202AAC005DEDC0 /* IAPhandler.swift in Sources */,
 				E52B0D81207A1C20006FB57D /* QuestionCell.swift in Sources */,
 				E52B0DB820A7E5BD006FB57D /* DataModel.xcdatamodeld in Sources */,
 				E514DD9F20710C57000AB8E1 /* AppDelegate.swift in Sources */,
