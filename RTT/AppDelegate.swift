@@ -15,12 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    func parseCSV() {
-     
-        let fileURL = Bundle.main.url(forResource: "rttquestions", withExtension: "csv")
+let fileURL = Bundle.main.url(forResource: "rttquestions", withExtension: "csv")
+    
+    func parseCSV(fileURL: URL) {
+    
         removeData()
         do {
-            let content = try String(contentsOf: fileURL!, encoding: String.Encoding.utf8)
+            let content = try String(contentsOf: fileURL, encoding: String.Encoding.utf8)
             let parsedCSV = content.components(separatedBy: "\n").map{ $0.components(separatedBy: ",")}
             print(parsedCSV)
             for item in parsedCSV {
@@ -67,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaults.set(score, forKey: "score")
         let isPreloaded = defaults.bool(forKey: "isPreloaded")
         if !isPreloaded {
-            parseCSV()
+            parseCSV(fileURL: fileURL!)
             defaults.set(true, forKey: "isPreloaded")
         }
         return true
