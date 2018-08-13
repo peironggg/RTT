@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,14 +43,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="RIJ-fv-8xN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9tZ-OI-Sgk"/>
-                            <constraint firstItem="7lZ-tW-Zgv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="HVI-tn-etN"/>
-                            <constraint firstItem="7lZ-tW-Zgv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JdX-Cy-1Gf"/>
-                            <constraint firstItem="7lZ-tW-Zgv" firstAttribute="top" secondItem="RIJ-fv-8xN" secondAttribute="bottom" id="Jyx-5g-dOF"/>
-                            <constraint firstItem="7lZ-tW-Zgv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tlf-Rx-eeS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7lZ-tW-Zgv" secondAttribute="trailing" id="YTW-MN-IJf"/>
-                            <constraint firstItem="RIJ-fv-8xN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hdc-cG-d3G"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RIJ-fv-8xN" secondAttribute="trailing" id="nRy-PH-7CK"/>
+                            <constraint firstItem="7lZ-tW-Zgv" firstAttribute="top" secondItem="RIJ-fv-8xN" secondAttribute="bottom" id="DsR-Ho-8Ns"/>
+                            <constraint firstItem="RIJ-fv-8xN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NLt-UU-vJb"/>
+                            <constraint firstItem="7lZ-tW-Zgv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dpF-h2-UVp"/>
+                            <constraint firstItem="RIJ-fv-8xN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hxz-pT-dUE"/>
+                            <constraint firstItem="7lZ-tW-Zgv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kCQ-Kc-GE2"/>
+                            <constraint firstItem="RIJ-fv-8xN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nkl-eR-0F4"/>
+                            <constraint firstItem="7lZ-tW-Zgv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="p6M-a9-0XB"/>
+                            <constraint firstItem="7lZ-tW-Zgv" firstAttribute="height" secondItem="RIJ-fv-8xN" secondAttribute="height" id="rNW-Se-nBp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -169,13 +168,51 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nvu-T9-F4M"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Full Test" id="6eY-sB-V5f">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="ddH-8z-sJP">
+                            <connections>
+                                <action selector="submitButtonPressed:" destination="452-6O-aQM" id="WA5-5y-6OM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView2" destination="Wjt-JV-mx6" id="tTR-da-fJN"/>
+                        <segue destination="wgH-1P-rdg" kind="show" identifier="toTestScore2" id="pUa-EW-icq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaa-yv-Oka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1220" y="-597.75112443778119"/>
+        </scene>
+        <!--Test Score Controller2-->
+        <scene sceneID="zhj-1r-o2m">
+            <objects>
+                <viewController id="wgH-1P-rdg" customClass="TestScoreController2" customModule="RTT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CFh-De-yzO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d1f-Tq-9x1" userLabel="resultsTableView2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d1f-Tq-9x1" firstAttribute="leading" secondItem="Zgc-xE-Od2" secondAttribute="leading" id="TWQ-Z7-CLL"/>
+                            <constraint firstItem="Zgc-xE-Od2" firstAttribute="bottom" secondItem="d1f-Tq-9x1" secondAttribute="bottom" id="fkL-qV-gGL"/>
+                            <constraint firstItem="Zgc-xE-Od2" firstAttribute="trailing" secondItem="d1f-Tq-9x1" secondAttribute="trailing" id="hel-aL-DzA"/>
+                            <constraint firstItem="d1f-Tq-9x1" firstAttribute="top" secondItem="Zgc-xE-Od2" secondAttribute="top" id="lWf-4O-CVF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zgc-xE-Od2"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultsTableView2" destination="d1f-Tq-9x1" id="UQx-Sb-l1c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bM-0C-1EP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2147" y="-597"/>
         </scene>
         <!--Trial-->
         <scene sceneID="N6E-dC-uMr">
@@ -316,7 +353,7 @@
                                     <navigationItem title="Title" id="Ae7-Md-0J7"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K5H-dh-4nf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K5H-dh-4nf" userLabel="resultsTableView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>

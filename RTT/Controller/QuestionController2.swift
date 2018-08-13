@@ -51,5 +51,15 @@ class QuestionController2:  UIViewController, UICollectionViewDataSource, UIColl
         return CGFloat(0)
     }
     
+    @IBAction func submitButtonPressed(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Submit", message: "Have you finished all questions?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { (action) in
+            self.performSegue(withIdentifier: "toTestScore", sender: sender)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+        }))
+        present(alert, animated: true, completion: nil)
+    }
     
 }
