@@ -208,7 +208,7 @@
                     </view>
                     <connections>
                         <outlet property="resultsTableView2" destination="d1f-Tq-9x1" id="UQx-Sb-l1c"/>
-                        <segue destination="RrY-zE-3IK" kind="show" id="qu0-kO-5yW"/>
+                        <segue destination="RrY-zE-3IK" kind="show" identifier="goToReview2" id="qu0-kO-5yW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bM-0C-1EP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -246,20 +246,29 @@
                                                         <constraint firstAttribute="height" constant="200" id="NZL-f4-dB9"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="34"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbf-JT-WNF" userLabel="answerOneButton">
                                                     <rect key="frame" x="0.0" y="200" width="375" height="135.5"/>
-                                                    <state key="normal" title="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    <state key="normal" title="12">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycg-bg-ywT" userLabel="answerTwoButton">
                                                     <rect key="frame" x="0.0" y="335.5" width="375" height="135"/>
-                                                    <state key="normal" title="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    <state key="normal" title="24">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ud-lQ-6ua" userLabel="answerThreeButton">
                                                     <rect key="frame" x="0.0" y="470.5" width="375" height="135.5"/>
-                                                    <state key="normal" title="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    <state key="normal" title="14">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                 </button>
                                             </subviews>
                                         </view>

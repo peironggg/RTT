@@ -36,7 +36,7 @@ class TestScoreController2: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as? ReviewController
+        let destinationVC = segue.destination as? ReviewController2
         destinationVC?.indexNumber = indexNumber
     }
     

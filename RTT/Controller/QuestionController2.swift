@@ -55,7 +55,7 @@ class QuestionController2:  UIViewController, UICollectionViewDataSource, UIColl
         let alert = UIAlertController(title: "Submit", message: "Have you finished all questions?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { (action) in
-            self.performSegue(withIdentifier: "toTestScore", sender: sender)
+            self.performSegue(withIdentifier: "toTestScore2", sender: sender)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
         }))
