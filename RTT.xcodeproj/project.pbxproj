@@ -22,6 +22,8 @@
 		E5702D3920B12AAB00C3CF67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5702D3820B12AAB00C3CF67 /* LaunchScreen.storyboard */; };
 		E5702D3D20B12FEF00C3CF67 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5702D3C20B12FEF00C3CF67 /* Images.xcassets */; };
 		E59428FF2121B5170052C63F /* TestScoreController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59428FE2121B5170052C63F /* TestScoreController2.swift */; };
+		E59429012124037F0052C63F /* ReviewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59429002124037F0052C63F /* ReviewCell2.swift */; };
+		E5942903212403D20052C63F /* ReviewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5942902212403D20052C63F /* ReviewController2.swift */; };
 		E5B7212B20BC1BFA008B9C5C /* ReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B7212A20BC1BFA008B9C5C /* ReviewController.swift */; };
 		E5B7212D20BC217F008B9C5C /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B7212C20BC217F008B9C5C /* ReviewCell.swift */; };
 		E5CCF62B21202D8A005DEDC0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CCF62A21202D8A005DEDC0 /* StoreKit.framework */; };
@@ -63,6 +65,8 @@
 		E5702D3820B12AAB00C3CF67 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5702D3C20B12FEF00C3CF67 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E59428FE2121B5170052C63F /* TestScoreController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScoreController2.swift; sourceTree = "<group>"; };
+		E59429002124037F0052C63F /* ReviewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell2.swift; sourceTree = "<group>"; };
+		E5942902212403D20052C63F /* ReviewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewController2.swift; sourceTree = "<group>"; };
 		E5B7212A20BC1BFA008B9C5C /* ReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewController.swift; sourceTree = "<group>"; };
 		E5B7212C20BC217F008B9C5C /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		E5CCF62A21202D8A005DEDC0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -140,6 +144,7 @@
 				E514DDB72074A89F000AB8E1 /* QuestionController.swift */,
 				E5CCF62C21203272005DEDC0 /* QuestionController2.swift */,
 				E5B7212A20BC1BFA008B9C5C /* ReviewController.swift */,
+				E5942902212403D20052C63F /* ReviewController2.swift */,
 				E52B0D89209EEC50006FB57D /* TestScoreController.swift */,
 				E59428FE2121B5170052C63F /* TestScoreController2.swift */,
 			);
@@ -154,6 +159,7 @@
 				E52B0D7F207A1C20006FB57D /* QuestionCell.swift */,
 				E5CCF62E2120336D005DEDC0 /* QuestionCell2.swift */,
 				E5B7212C20BC217F008B9C5C /* ReviewCell.swift */,
+				E59429002124037F0052C63F /* ReviewCell2.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,10 +314,12 @@
 				E514DDA120710C57000AB8E1 /* WelcomeController.swift in Sources */,
 				E514DDB82074A89F000AB8E1 /* QuestionController.swift in Sources */,
 				E5B7212B20BC1BFA008B9C5C /* ReviewController.swift in Sources */,
+				E5942903212403D20052C63F /* ReviewController2.swift in Sources */,
 				E59428FF2121B5170052C63F /* TestScoreController2.swift in Sources */,
 				E5CCF62D21203272005DEDC0 /* QuestionController2.swift in Sources */,
 				E52B0D81207A1C20006FB57D /* QuestionCell.swift in Sources */,
 				E52B0DB820A7E5BD006FB57D /* DataModel.xcdatamodeld in Sources */,
+				E59429012124037F0052C63F /* ReviewCell2.swift in Sources */,
 				E514DD9F20710C57000AB8E1 /* AppDelegate.swift in Sources */,
 				E52B0DBE20A875A9006FB57D /* CoreDataMethods.swift in Sources */,
 			);

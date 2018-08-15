@@ -26,6 +26,7 @@ class WelcomeController: UIViewController, SKProductsRequestDelegate, SKPaymentT
             print(product.localizedDescription)
             print(product.price)
             
+            
             list.append(product)
         }
     }
