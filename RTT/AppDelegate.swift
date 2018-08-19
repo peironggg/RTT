@@ -36,6 +36,7 @@ let fileURL = Bundle.main.url(forResource: "rttquestions", withExtension: "csv")
                 question.chosenAnswer = item[6]
                 question.questionNumber = item[7]
                 try persistentContainer.viewContext.save()
+                
             }
             print(parsedCSV)
         } catch {
@@ -66,6 +67,7 @@ let fileURL = Bundle.main.url(forResource: "rttquestions", withExtension: "csv")
         var score = defaults.integer(forKey: "score")
         score = 0
         defaults.set(score, forKey: "score")
+        defaults.set(false, forKey: "isPreloaded")
         let isPreloaded = defaults.bool(forKey: "isPreloaded")
         if !isPreloaded {
             parseCSV(fileURL: fileURL!)
