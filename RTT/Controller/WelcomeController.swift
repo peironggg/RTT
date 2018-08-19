@@ -89,7 +89,7 @@ class WelcomeController: UIViewController, SKProductsRequestDelegate, SKPaymentT
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        print("no problemo")
         freeTrial.layer.borderWidth = 6.0
         freeTrial.layer.borderColor = FlatBlack().cgColor
         freeTrial.backgroundColor = UIColor(hexString: "e74c3c")

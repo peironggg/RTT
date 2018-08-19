@@ -26,6 +26,7 @@ let fileURL = Bundle.main.url(forResource: "rttquestions", withExtension: "csv")
             print(parsedCSV)
             for item in parsedCSV {
                 
+                if item != [""] {
                 let question = Questions(context: persistentContainer.viewContext)
                 question.questionTitle = item[0]
                 question.correctAnswer = item[1]
@@ -36,7 +37,7 @@ let fileURL = Bundle.main.url(forResource: "rttquestions", withExtension: "csv")
                 question.chosenAnswer = item[6]
                 question.questionNumber = item[7]
                 try persistentContainer.viewContext.save()
-                
+                }
             }
             print(parsedCSV)
         } catch {
